@@ -1,0 +1,9 @@
+{
+    "title": "Sample JSON Data",
+    "description": "This data is served using Node.js and demonstrates JSON content delivery.",
+    "items": [
+        { "id": 1, "name": "Item One", "price": 25.99 },
+        { "id": 2, "name": "Item Two", "price": 15.49 },
+        { "id": 3, "name": "Item Three", "price": 30.00 }
+    ]
+}

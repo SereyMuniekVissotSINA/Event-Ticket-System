@@ -1,0 +1,26 @@
+29ac6f62-007c-4c89-96bc-f90d0817ea90 	 [2025-04-02 11:03:24] 	 GET request to /
+3dc75cb1-a5eb-47c7-8cd2-ac09872f20d1 	 [2025-04-02 11:03:24] 	 ERROR: Error - Not allowed by CORS
+9f9b772f-d406-450a-958c-f80a6d9990ac 	 [2025-04-02 11:04:31] 	 GET request to /
+23bfbda9-cefc-400e-b3cd-97446f370863 	 [2025-04-02 11:04:31] 	 GET request to /assets/styles.css
+1eb9e398-8cc0-4bd3-8447-ceb4eb64c5bc 	 [2025-04-02 11:04:31] 	 GET request to /assets/logo.png
+618349b2-270c-4c52-bdd8-fda06b69d01d 	 [2025-04-02 11:04:31] 	 GET request to /assets/script.js
+f09dedc7-9ebb-46af-9448-448ce129bca9 	 [2025-04-02 11:06:25] 	 GET request to /assets/styles.css
+16524205-a3d0-425b-bf99-24a298ca0fc7 	 [2025-04-02 11:06:26] 	 GET request to /
+e1af3ae7-ab2f-426e-b522-090bb4299f98 	 [2025-04-02 11:06:26] 	 GET request to /assets/styles.css
+2bb7f5a0-7782-4984-be2d-761267ed67b1 	 [2025-04-02 11:06:26] 	 GET request to /assets/script.js
+4e90ae8e-4cd0-4927-8866-d81b35205d1a 	 [2025-04-02 11:06:26] 	 GET request to /assets/logo.png
+81f8d845-a455-4f82-aeb0-5d2fbee3a6ff 	 [2025-04-02 11:06:28] 	 GET request to /about.html
+b68d32b4-a9e8-487f-a959-84f6ae2c62e5 	 [2025-04-02 11:06:28] 	 GET request to /assets/styles.css
+c4458aa2-e239-4b5a-a4ff-a5bbd0bfd328 	 [2025-04-02 11:06:30] 	 GET request to /
+6149c981-fbd6-493f-9fff-fc308fe5fcc8 	 [2025-04-02 11:06:30] 	 GET request to /assets/styles.css
+4ffe8558-cb25-4b60-8f4d-86a1ce309d4e 	 [2025-04-02 11:06:30] 	 GET request to /assets/logo.png
+c83ae5e4-d11b-4e58-8ab2-5f41f279a679 	 [2025-04-02 11:06:30] 	 GET request to /assets/script.js
+e05fe558-5baa-4208-9eb9-b6439d00b129 	 [2025-04-02 11:06:33] 	 GET request to /about.html
+cd988432-5415-4804-bb35-bde4bf033509 	 [2025-04-02 11:06:33] 	 GET request to /assets/styles.css
+84196a3f-d61c-44a7-a72a-2bdbd4ebb04f 	 [2025-04-02 11:06:36] 	 GET request to /cc.html
+4bb75f7d-4a4d-465c-937e-ffe6e0425335 	 [2025-04-02 11:06:36] 	 GET request to /assets/styles.css
+769b5cce-6026-42a4-9161-f0f13af2a549 	 [2025-04-02 11:06:43] 	 GET request to /assets/styles.css
+9c832ce4-35c8-4058-86d5-6b8bc3f09d06 	 [2025-04-02 11:06:44] 	 GET request to /
+fa32e289-9601-4a11-98d6-1b1966cead0a 	 [2025-04-02 11:06:44] 	 GET request to /assets/styles.css
+081177cd-f98f-4c3e-a5c4-272e639cd58b 	 [2025-04-02 11:06:44] 	 GET request to /assets/logo.png
+2b18f6f2-4c11-4f81-8836-66ede16b6cb3 	 [2025-04-02 11:06:44] 	 GET request to /assets/script.js

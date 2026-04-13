@@ -1,0 +1,36 @@
+
+=====================================
+Date and Time: 4/13/2026, 6:28:23 PM
+Error Name: IntentionalError
+Error Message: This is an intentional test error!
+Stack Trace:
+IntentionalError: This is an intentional test error!
+    at D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\server.js:43:17
+    at Layer.handle [as handle_request] (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\index.js:280:10)
+    at logger (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\middleware\logger.js:22:5)
+    at Layer.handle [as handle_request] (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\layer.js:95:5)
+=====================================
+
+=====================================
+Date and Time: 4/13/2026, 6:28:35 PM
+Error Name: TypeError
+Error Message: Cannot read properties of undefined (reading 'someProperty')
+Stack Trace:
+TypeError: Cannot read properties of undefined (reading 'someProperty')
+    at D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\server.js:52:24
+    at Layer.handle [as handle_request] (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\index.js:280:10)
+    at logger (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\middleware\logger.js:22:5)
+    at Layer.handle [as handle_request] (D:\Vissot\AUPP & FHSU Course Folder\INF653 - BackEnd\node_modules\express\lib\router\layer.js:95:5)
+=====================================
