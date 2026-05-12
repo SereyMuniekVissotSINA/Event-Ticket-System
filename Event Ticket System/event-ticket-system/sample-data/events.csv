@@ -1,0 +1,11 @@
+_id,title,description,category,venue,date,time,seatCapacity,vipSeatCapacity,bookedSeats,bookedVipSeats,price,vipPrice,imageUrl
+1,Summer Music Festival,Enjoy live performances from top artists,Music,Central Park,2026-06-15,19:00,500,100,120,25,49.99,99.99,https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500
+2,Tech Conference 2026,Latest innovations in technology and AI,Conference,Convention Center,2026-05-20,09:00,1000,150,250,40,99.99,199.99,https://images.unsplash.com/photo-1552664730-d307ca884978?w=500
+3,NBA Championship Game,Watch the ultimate basketball showdown,Sports,Crypto.com Arena,2026-06-10,20:00,20000,500,5500,150,150.00,350.00,https://images.unsplash.com/photo-1552861362-7ddd2b8b1513?w=500
+4,Shakespeare Theater Night,Classic performance of Romeo and Juliet,Theater,Broadway Theater,2026-05-25,20:00,800,100,200,30,75.50,150.00,https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500
+5,Digital Art Exhibition,Immersive modern art experience,Exhibition,Museum of Modern Art,2026-05-30,10:00,300,50,85,15,25.00,50.00,https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500
+6,Jazz Concert Series,Featuring legendary jazz musicians,Music,Blue Note Jazz Club,2026-06-05,21:00,150,30,45,10,89.99,149.99,https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500
+7,Startup Pitch Competition,500 startups pitching to investors,Conference,Tech Hub Downtown,2026-06-01,14:00,500,100,180,35,39.99,79.99,https://images.unsplash.com/photo-1552664730-d307ca884978?w=500
+8,Marathon 2026,Annual city marathon event,Sports,City Streets,2026-05-28,07:00,5000,200,3200,50,45.00,85.00,https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500
+9,Stand-up Comedy Night,Laugh with world-famous comedians,Theater,Comedy Club,2026-06-12,20:30,200,30,120,15,65.00,120.00,https://images.unsplash.com/photo-1485579149c01123123e37250bc337b2?w=500
+10,Photography Masterclass,Learn professional photography techniques,Exhibition,Art Center,2026-06-08,18:00,100,20,60,8,55.00,95.00,https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=500

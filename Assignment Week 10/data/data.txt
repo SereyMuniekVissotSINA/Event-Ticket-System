@@ -1,2 +1,0 @@
-This is a sample text file served from our Node.js server.
-You can customize this content as needed.
