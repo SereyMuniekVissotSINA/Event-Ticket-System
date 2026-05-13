@@ -99,7 +99,7 @@ export async function POST(request: Request) {
 
     booking.qrCode = booking._id.toString()
     
-    const qrCodeUrl = `${getAppUrl(request)}/api/bookings/validate/${booking._id}`
+    const qrCodeUrl = `${getAppUrl(request)}/tickets/${booking._id}`
     const qrCodeImage = await QRCode.toDataURL(qrCodeUrl)
     
     booking.qrCodeImage = qrCodeImage
