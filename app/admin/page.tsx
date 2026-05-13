@@ -216,17 +216,19 @@ export default function AdminPage() {
       const errorMsg = err instanceof Error ? err.message : 'Failed to delete event';
       console.error('[Event Delete] Error:', errorMsg);
       
-      // Check if it's a booking conflict error (409)
-      if (errorMsg.includes('has bookings')) {
+      // Check if it's a booking conflict error (409) - check for "booking" and "cannot be deleted"
+      if ((errorMsg.includes('booking') || errorMsg.includes('bookings')) && errorMsg.includes('cannot be deleted')) {
         console.log('[Event Delete] Event has bookings, showing confirmation modal');
-        // Extract booking count from error message or use a default
-        const bookingMatch = errorMsg.match(/(\d+)/);
-        const bookingCount = bookingMatch ? parseInt(bookingMatch[1]) : 'multiple';
+        // Extract booking count from error message
+        const bookingMatch = errorMsg.match(/(\d+)\s+booking/);
+        const bookingCount = bookingMatch ? parseInt(bookingMatch[1]) : 1;
+        console.log('[Event Delete] Extracted booking count:', bookingCount);
         setDeleteEventId(eventId);
-        setDeleteEventBookings(Number(bookingCount));
+        setDeleteEventBookings(bookingCount);
         setShowDeleteModal(true);
         setError('');
       } else {
+        console.log('[Event Delete] Not a booking conflict, setting error');
         setError(errorMsg);
       }
     } finally {
@@ -786,20 +788,33 @@ export default function AdminPage() {
       {showDeleteModal && deleteEventId && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Delete Event?</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-3xl">🗑️</span>
+              <h3 className="text-2xl font-bold text-gray-900">Delete Event?</h3>
+            </div>
             
             <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <p className="text-yellow-800 font-semibold mb-2">⚠️ Warning</p>
+              <p className="text-yellow-800 font-semibold mb-2">⚠️ Active Bookings Detected</p>
               <p className="text-yellow-700 text-sm">
-                This event has <span className="font-bold text-lg">{deleteEventBookings}</span> active booking(s).
+                This event has <span className="font-bold text-lg text-yellow-900">{deleteEventBookings}</span> active booking(s) that will be affected.
               </p>
             </div>
 
-            <div className="mb-6 space-y-2">
-              <p className="text-gray-700 font-medium">What would you like to do?</p>
-              <ul className="text-sm text-gray-600 space-y-1 ml-4">
-                <li>• <span className="font-medium">Delete with bookings:</span> Removes event and all associated bookings</li>
-                <li>• <span className="font-medium">Cancel:</span> Keep the event and bookings</li>
+            <div className="mb-6 space-y-3">
+              <p className="text-gray-700 font-medium">What will happen:</p>
+              <ul className="text-sm text-gray-600 space-y-2 ml-4 bg-gray-50 p-3 rounded-lg">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold mt-0.5">✓</span>
+                  <span>All <span className="font-medium">{deleteEventBookings}</span> customers will be <span className="font-medium">automatically refunded</span></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold mt-0.5">✓</span>
+                  <span>Refund notifications will be <span className="font-medium">sent to all customers</span></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold mt-0.5">✓</span>
+                  <span>The event will be permanently <span className="font-medium">deleted</span></span>
+                </li>
               </ul>
             </div>
 
@@ -817,20 +832,38 @@ export default function AdminPage() {
                     : 'bg-gray-300 hover:bg-gray-400 text-gray-900'
                 }`}
               >
-                Cancel
+                Keep Event
               </button>
               <button
                 onClick={handleConfirmDeleteWithBookings}
                 disabled={deletingEvent}
-                className={`flex-1 px-4 py-2 rounded-lg font-medium transition ${
+                className={`flex-1 px-4 py-2 rounded-lg font-medium transition flex items-center justify-center gap-2 ${
                   deletingEvent
                     ? 'bg-red-400 text-white cursor-not-allowed opacity-75'
                     : 'bg-red-600 hover:bg-red-700 text-white'
                 }`}
               >
-                {deletingEvent ? 'Deleting...' : 'Delete Event & Bookings'}
+                {deletingEvent ? (
+                  <>
+                    <span className="animate-spin">⏳</span>
+                    Processing...
+                  </>
+                ) : (
+                  <>
+                    <span>🗑️</span>
+                    Delete & Refund All
+                  </>
+                )}
               </button>
             </div>
+
+            {deletingEvent && (
+              <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                <p className="text-sm text-blue-700">
+                  Processing refunds for {deleteEventBookings} customer{deleteEventBookings !== 1 ? 's' : ''}...
+                </p>
+              </div>
+            )}
           </div>
         </div>
       )}
