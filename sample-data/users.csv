@@ -1,6 +1,0 @@
-_id,name,email,password,role
-1,John Doe,john@example.com,password123,user
-2,Jane Smith,jane@example.com,password123,user
-3,Mike Johnson,mike@example.com,password123,admin
-4,Sarah Williams,sarah@example.com,password123,user
-5,Admin User,admin@example.com,password123,admin
