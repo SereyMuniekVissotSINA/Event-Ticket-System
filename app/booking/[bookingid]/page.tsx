@@ -100,21 +100,34 @@ export default function BookingTicketPage({ params }: TicketPageProps) {
         {/* Main Ticket Card */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Event Image Header */}
-          {event.imageUrl && (
-            <div className="relative h-48 md:h-64 overflow-hidden bg-gray-200">
-              <img
-                src={event.imageUrl}
-                alt={event.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-              {isVip && (
-                <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full font-bold flex items-center gap-2 shadow-lg">
-                  <FaStar /> VIP TICKET
+          <div className="relative h-48 md:h-64 overflow-hidden bg-gradient-to-br from-blue-500 to-blue-600">
+            {event.imageUrl ? (
+              <>
+                <img
+                  src={event.imageUrl}
+                  alt={event.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.error('[BookingPage] Image failed to load:', event.imageUrl);
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+              </>
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+                <div className="text-white text-center">
+                  <p className="text-6xl mb-2">🎫</p>
+                  <p className="text-lg font-semibold">{event.title}</p>
                 </div>
-              )}
-            </div>
-          )}
+              </div>
+            )}
+            {isVip && (
+              <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full font-bold flex items-center gap-2 shadow-lg">
+                <FaStar /> VIP TICKET
+              </div>
+            )}
+          </div>
 
           <div className="p-6 md:p-8">
             {/* Event Title & Category */}
